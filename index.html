@@ -14,6 +14,7 @@
         <h1>{{title}}</h1>
         <input v-model="name">
         <h2>{{name}}</h2>
+        <h3>count: <span>{{count}}</span></h3>
         <button v-on:click="clickMe">clickMe</button>
     </div>
 </body>
@@ -29,12 +30,13 @@
         el: '#app',
         data: {
             title: 'this is title',
-            name: 'this is name'
+            name: 'this is name',
+            count: 1
         },
         methods: {
             clickMe: function () {
             	console.log(this);
-                this.title = 'clickMe';
+                this.count ++;
             }
         },
         mounted: function () {
